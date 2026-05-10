@@ -2,7 +2,7 @@
 
 .page-banner {
     position: relative;
-    height: 260px;
+    height: 160px;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
@@ -228,15 +228,33 @@
     display: block;
 }
 
-@media(max-width:900px) {
-
-    .banner-content {
-        padding: 1.5rem;
-    }
+@media (max-width: 900px) {
 
     .page-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .page-info,
+    .slider,
+    .video-slider,
+    .map-box {
+        width: 100%;
+    }
+
+    .video-slider {
+        min-height: 200px;
+        aspect-ratio: 16 / 9;
+    }
+
+    .stats-row {
         grid-template-columns: 1fr;
-        padding: 1.5rem 1.5rem 3rem;
+    }
+
+    .page-info {
+        padding: 1.2rem;
     }
 
 }

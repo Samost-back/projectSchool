@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Володимирець</title>
     <link rel="stylesheet" href="style/volodymyrets.css">
 </head>
@@ -12,8 +13,9 @@
     <header class="header">
         <div class="logo">
             <h2>Освітній портал</h2>
-        </div>
-        <nav class="nav">
+        </div><button class="burger" onclick="toggleMenu()">☰</button>
+
+        <nav class="nav" id="nav">
             <a href="index.html">Головна</a>
             <a href="volodymyrets.html" class="active">Володимирець</a>
             <a href="varash.html">Вараш</a>
@@ -106,8 +108,6 @@
             </iframe>
 
         </div>
-        <button class="prev" onclick="changeSlide(-1)">‹</button>
-        <button class="next" onclick="changeSlide(1)">›</button>
         <div class="slider-dots" id="dots"></div>
         <div class="slide-counter" id="counter"></div>
         </div>
@@ -160,6 +160,10 @@
 
         // Auto-play
         setInterval(() => changeSlide(1), 4500);
+
+        function toggleMenu() {
+            document.getElementById('nav').classList.toggle('active');
+        }
     </script>
 
 </body>
