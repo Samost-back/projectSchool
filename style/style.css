@@ -480,3 +480,36 @@ body {
         gap: 1rem;
     }
 }
+
+.burger {
+    display: none;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+@media (max-width: 900px) {
+    .burger {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 0;
+        background: rgba(13, 27, 42, 0.98);
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        display: none;
+        text-align: center;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+}
