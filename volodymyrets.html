@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Володимирець</title>
+    <link rel="stylesheet" href="style/volodymyrets.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h2>Освітній портал</h2>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Головна</a>
+            <a href="volodymyrets.html" class="active">Володимирець</a>
+            <a href="varash.html">Вараш</a>
+            <a href="lutsk.html">Луцьк</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="page-banner">
+        <img class="banner-bg" src="https://vrkdn.org.ua/pluginfile.php/1/theme_moove/sliderimage1/1716489282/1.jpg"
+            onerror="this.style.opacity='0'" alt="">
+        <div class="banner-content">
+            <div class="breadcrumb"><a href="index.html">Головна</a> / Володимирець</div>
+            <h1>Волод<span>имирець</span></h1>
+            <div class="banner-subtitle">Вараський район · Рівненська область</div>
+        </div>
+    </div>
+
+    <section class="page-section">
+
+        <!-- Info block -->
+        <div class="page-info">
+
+            <p class="info-section-title">Про місто</p>
+            <h2>Селище Володимирець</h2>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-value">~9 300</span>
+                    <span class="stat-label">мешканців</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">1570</span>
+                    <span class="stat-label">рік заснування</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">100 км</span>
+                    <span class="stat-label">від Рівного</span>
+                </div>
+            </div>
+
+            <p>
+                Володимирець — селище міського типу у Вараському районі Рівненської
+                області, центр Володимирецької громади. Розташоване в мальовничому
+                межиріччі Стиру й Горині, на Поліссі — за 100 км від обласного центру.
+            </p>
+            <p>
+                Перші письмові згадки про поселення датуються 1570 роком. Упродовж
+                століть Володимирець входив до складу різних держав — Речі Посполитої,
+                Російської імперії та Радянського Союзу. Сьогодні це активна громада,
+                що зберігає поліську самобутність і розвиває освіту та культуру.
+            </p>
+            <p>
+                Архітектурна перлина містечка — дерев'яна Свято-Успенська церква,
+                що збереглась із давніх часів і є пам'яткою народної архітектури Волині.
+            </p>
+
+            <p class="info-section-title">Ліцей «Колегіум»</p>
+            <h2>Володимирецький ліцей «Колегіум»</h2>
+
+            <p>
+                Заклад розташований за адресою: вул. Миру, 4, смт Володимирець.
+                Ліцей підпорядкований Володимирецькій селищній раді та є одним із
+                провідних навчальних закладів загальної середньої освіти регіону.
+            </p>
+            <p>
+                У ліцеї створені умови для поглибленого вивчення математики,
+                інформатики, природничих і гуманітарних дисциплін. Заклад отримав
+                освітню субвенцію на оновлення матеріально-технічної бази, що
+                дозволило суттєво покращити навчальне середовище.
+            </p>
+            <p>
+                Учні ліцею регулярно беруть участь у регіональних і всеукраїнських
+                олімпіадах. Випускники успішно вступають до провідних університетів
+                України. Заклад активно впроваджує дистанційне навчання та цифрові
+                освітні ресурси.
+            </p>
+
+            <a class="school-link" href="http://vrk3.org.ua/" target="_blank">
+                Офіційний сайт ліцею
+            </a>
+
+        </div>
+
+        <div class="slider video-slider">
+
+            <iframe
+                src="https://www.youtube.com/embed/uyE5AENXtnU?autoplay=1&mute=1&loop=1&playlist=uyE5AENXtnU&controls=1&rel=0"
+                title="Володимирецький ліцей Колегіум" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">‹</button>
+        <button class="next" onclick="changeSlide(1)">›</button>
+        <div class="slider-dots" id="dots"></div>
+        <div class="slide-counter" id="counter"></div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-box">
+            <div class="map-label"></div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.1169162734946!2d26.128987100000003!3d51.419278899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472617759f0ab329%3A0x4ea9754799fab940!2sVolodymyrets%20District%20Collegium!5e0!3m2!1sru!2sua!4v1778424867323!5m2!1sru!2sua"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </section>
+
+    <script>
+        let current = 0;
+        const slides = document.getElementById('slides');
+        const counter = document.getElementById('counter');
+        const total = slides.querySelectorAll('img').length;
+        const dotsEl = document.getElementById('dots');
+
+        // Build dots
+        for (let i = 0; i < total; i++) {
+            const d = document.createElement('button');
+            d.className = 'dot' + (i === 0 ? ' active' : '');
+            d.onclick = () => goTo(i);
+            dotsEl.appendChild(d);
+        }
+
+        function goTo(n) {
+
+            current = (n + total) % total;
+
+            slides.style.transform =
+                `translateX(-${current * 100}%)`;
+
+            counter.textContent =
+                `${current + 1} / ${total}`;
+
+            dotsEl
+                .querySelectorAll('.dot')
+                .forEach((d, i) =>
+                    d.classList.toggle('active', i === current)
+                );
+
+        }
+
+        function changeSlide(dir) { goTo(current + dir); }
+
+        // Auto-play
+        setInterval(() => changeSlide(1), 4500);
+    </script>
+
+</body>
+
+</html>
