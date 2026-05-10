@@ -24,7 +24,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ── HEADER ── */
 .header {
     display: flex;
     align-items: center;
@@ -80,7 +79,6 @@ body {
     width: 100%;
 }
 
-/* ── HERO ── */
 .hero {
     min-height: calc(100vh - 70px);
     display: grid;
@@ -92,7 +90,6 @@ body {
     overflow: hidden;
 }
 
-/* Background decoration */
 .hero::before {
     content: '';
     position: absolute;
@@ -171,7 +168,6 @@ body {
     border-bottom: none;
 }
 
-/* ── VISUAL SIDE ── */
 .visual-area {
     display: flex;
     align-items: center;
@@ -189,7 +185,6 @@ body {
     justify-content: center;
 }
 
-/* Rotating dashed ring */
 .ring {
     position: absolute;
     inset: 0;
@@ -198,7 +193,6 @@ body {
     animation: spin 20s linear infinite;
 }
 
-/* Dots on the ring */
 .ring::before,
 .ring::after {
     content: '';
@@ -218,7 +212,6 @@ body {
     background: var(--sky);
 }
 
-/* Solid glow ring */
 .ring-solid {
     position: absolute;
     inset: 30px;
@@ -227,7 +220,6 @@ body {
     box-shadow: 0 0 40px rgba(30, 111, 187, 0.2), inset 0 0 40px rgba(30, 111, 187, 0.1);
 }
 
-/* Central emblem card */
 .emblem-card {
     position: relative;
     width: 200px;
@@ -247,7 +239,6 @@ body {
     animation: pulse-glow 4s ease-in-out infinite;
 }
 
-/* Book icon SVG */
 .emblem-icon {
     font-size: 3.5rem;
     line-height: 1;
@@ -263,7 +254,6 @@ body {
     text-align: center;
 }
 
-/* Orbiting dots */
 .orbit-dot {
     position: absolute;
     width: 8px;
@@ -327,7 +317,6 @@ body {
     height: 5px;
 }
 
-/* ── CARDS ── */
 .cards-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -359,7 +348,6 @@ body {
     object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
-    /* Fallback gradient shown while loading */
     background: linear-gradient(135deg, var(--deep), var(--navy));
 }
 
@@ -367,7 +355,6 @@ body {
     transform: scale(1.07);
 }
 
-/* Gradient overlay */
 .city-card::before {
     content: '';
     position: absolute;
@@ -381,7 +368,6 @@ body {
     background: linear-gradient(to top, rgba(13, 27, 42, 0.95) 0%, rgba(13, 27, 42, 0.5) 60%, transparent 100%);
 }
 
-/* Top accent bar */
 .city-card::after {
     content: '';
     position: absolute;
@@ -424,7 +410,6 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* Image error fallback */
 .city-card img.error {
     opacity: 0;
 }
@@ -451,7 +436,6 @@ body {
     background: linear-gradient(135deg, #3a1a5c, #1f0d37);
 }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
     .hero {
         grid-template-columns: 1fr;
@@ -490,7 +474,6 @@ body {
     cursor: pointer;
 }
 
-/* MOBILE MENU */
 @media (max-width: 900px) {
     .burger {
         display: block;

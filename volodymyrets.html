@@ -23,7 +23,6 @@
         </nav>
     </header>
 
-    <!-- Banner -->
     <div class="page-banner">
         <img class="banner-bg" src="https://vrkdn.org.ua/pluginfile.php/1/theme_moove/sliderimage1/1716489282/1.jpg"
             onerror="this.style.opacity='0'" alt="">
@@ -36,7 +35,6 @@
 
     <section class="page-section">
 
-        <!-- Info block -->
         <div class="page-info">
 
             <p class="info-section-title">Про місто</p>
@@ -112,7 +110,6 @@
         <div class="slide-counter" id="counter"></div>
         </div>
 
-        <!-- Map -->
         <div class="map-box">
             <div class="map-label"></div>
             <iframe
@@ -130,7 +127,6 @@
         const total = slides.querySelectorAll('img').length;
         const dotsEl = document.getElementById('dots');
 
-        // Build dots
         for (let i = 0; i < total; i++) {
             const d = document.createElement('button');
             d.className = 'dot' + (i === 0 ? ' active' : '');
@@ -158,7 +154,6 @@
 
         function changeSlide(dir) { goTo(current + dir); }
 
-        // Auto-play
         setInterval(() => changeSlide(1), 4500);
 
         function toggleMenu() {
